@@ -48,3 +48,4 @@ library(dplyr)
 
 groupedData <- group_by(allData, Subject, Activity)
 resultingData <- summarise_each(groupedData, funs(mean))
+write.table(resultingData,"tidyDataSet.txt",row.name=FALSE)
